@@ -12,7 +12,9 @@ struct GeneratePassword {
     
     mutating func generate(type: String!, length: Int!) {
         
-        let passwordType = type!
+        enum Types {
+            case numeric, lowerCase, upperCase, mixedCase, alphanumeric, alphanumericSpecial
+        }
         
         let numeric = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]
         let lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
@@ -21,40 +23,33 @@ struct GeneratePassword {
         let alphanumeric = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
         let alphanumericSpecial = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "!", "?", "/", "@", "#", "$", "%", "&"]
         
-        switch passwordType {
-        case "numeric":
-            //
-            var num = 1
+        let passwordType = type!
+        var passwordList = ""
+        
+        
+        func getType(for passwordType: String) -> [String] {
+            switch passwordType {
+            case "numeric":
+                return numeric
+            case "lowerCase":
+                return lowerCase
+            case "upperCase":
+                return upperCase
+            case "mixedCase":
+                return mixedCase
+            case "alphanumeric":
+                return alphanumeric
+            case "alphanumericSpecial":
+                return alphanumericSpecial
+            default:
+                break
+            }
             
-            repeat {
-                print(num)
-                num += 1
-            } while num <= 10
-            
-            var passwordList = ""
-//            var password = passwordList.joined(separator: "")
-            return password
-//        case lowerCase:
-//            //
-//            return password
-//        case upperCase:
-//            //
-//            return password
-//        case mixedCase:
-//            //
-//            return password
-//        case alphanumeric:
-//            //
-//            return password
-//        case alphanumericSpecial:
-//            //
-//            return password
-        default:
-            print("Invalid entry")  // Should not happen
         }
         
         
         
+        // FOR TESTING PURPOSES ONLY!!!!
         print(type!)
         print(length!)
     }
