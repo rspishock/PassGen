@@ -44,7 +44,7 @@ struct GeneratePassword {
             default:
                 break
             }
-            
+            return ["End of func."]  // TESTING
         }
         
         
