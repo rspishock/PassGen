@@ -64,17 +64,22 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         // This method is triggered whenever the user makes a change to the picker selection
         // The parameter named row and component represents what was selected
-        type = passwordTypes[row]
-        length = lengthOfPassword[row]
+//        type = passwordTypes[row]
+//        length = lengthOfPassword[row]
+        if pickerView == typeField {
+            type = passwordTypes[row]
+        } else {
+            length = lengthOfPassword[row]
+        }
     }
     
     // Call to generate password
     @IBAction func generateButtonPressed(_ sender: UIButton) {
-        print("Type: \(type)")
-        print("Length: \(length)")
+//        print("Type: \(type)")
+//        print("Length: \(length)")
         
 
-//        generatePassword.generate(type: type, length: length)
+        generatePassword.generate(type: type, length: length)
 
     }
 }
