@@ -32,12 +32,10 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="poS-oB-nJv" firstAttribute="centerX" secondItem="Pi6-P4-vaN" secondAttribute="centerX" id="6wq-L0-etO"/>
-                                    <constraint firstItem="PXX-aG-J4k" firstAttribute="centerX" secondItem="Pi6-P4-vaN" secondAttribute="centerX" id="9BU-aE-G4v"/>
-                                    <constraint firstItem="poS-oB-nJv" firstAttribute="centerY" secondItem="Pi6-P4-vaN" secondAttribute="centerY" constant="-64.25" id="CVw-d4-FDd"/>
-                                    <constraint firstItem="poS-oB-nJv" firstAttribute="centerX" secondItem="Pi6-P4-vaN" secondAttribute="centerX" id="hhB-Nz-v6d"/>
-                                    <constraint firstItem="poS-oB-nJv" firstAttribute="centerY" secondItem="Pi6-P4-vaN" secondAttribute="centerY" id="jJF-FN-4R9"/>
-                                    <constraint firstItem="PXX-aG-J4k" firstAttribute="centerY" secondItem="Pi6-P4-vaN" secondAttribute="centerY" id="kdd-Ur-MgE"/>
+                                    <constraint firstItem="PXX-aG-J4k" firstAttribute="top" secondItem="poS-oB-nJv" secondAttribute="bottom" constant="10" id="3FU-kb-fDY"/>
+                                    <constraint firstItem="poS-oB-nJv" firstAttribute="centerY" secondItem="Pi6-P4-vaN" secondAttribute="centerY" id="h8A-U3-0Du"/>
+                                    <constraint firstItem="PXX-aG-J4k" firstAttribute="centerX" secondItem="Pi6-P4-vaN" secondAttribute="centerX" id="mOl-RX-EEn"/>
+                                    <constraint firstItem="poS-oB-nJv" firstAttribute="centerX" secondItem="Pi6-P4-vaN" secondAttribute="centerX" id="thJ-ly-mqf"/>
                                 </constraints>
                             </view>
                         </subviews>
