@@ -12,7 +12,7 @@ struct GeneratePassword {
     
     mutating func generate(type: String!, length: String!) {
 
-        var passwordList = [String] () // empty string to hold password chars
+        var password = ""
         var startingLength = 1
         var typeList: [String]
         
@@ -59,21 +59,12 @@ struct GeneratePassword {
             typeList = []
         }
         
-        
-        
-        //        var test = passwordAssignment(type: type)
-        
-//        print(typeList)
-//        dump(typeList)
-//        func generatePassword(ofType type: [String], length long: Int) -> String {
       
         repeat {
-            passwordList.append(typeList.randomElement()!)
+            password.append(typeList.randomElement()!)
             startingLength += 1
-//            print(passwordList)
         } while startingLength <= Int(lengthAssignment)!
 
-        let password = passwordList.joined()
         print(password)  // TESTING
 
     }
